@@ -1,0 +1,190 @@
+[
+  {
+  "key": "10.3.1.Something",
+  "region": "10.Invoice & Monitor Proposition Delivery",
+  "subregion": "10.3.Manage Bailiff Process",
+  "value": 50
+},
+  {
+    "key": "10.2.1.Something",
+    "region": "10.Invoice & Monitor Proposition Delivery",
+    "subregion": "10.2.Manage Invoicing",
+    "value": 50
+  },
+  {
+    "key": "10.1.1.Something",
+    "region": "10.Invoice & Monitor Proposition Delivery",
+    "subregion": "10.1.Settle Costs for (Specific & Generic) Customer Interaction",
+    "value": 50
+  },
+  {
+  "key": "9.3.1.Something",
+  "region": "9.Assure Proposition",
+  "subregion": "9.3.Analyze Customer Complaint for Assurance",
+  "value": 50
+},
+  {
+    "key": "9.2.1.Something",
+    "region": "9.Assure Proposition",
+    "subregion": "9.2.Analyze Customer Request for Assurance",
+    "value": 50
+  },
+  {
+    "key": "9.1.1.Something",
+    "region": "9.Assure Proposition",
+    "subregion": "9.1.Analyze Customer Message for Assurance",
+    "value": 50
+  },
+  {
+  "key": "8.3.1.Something",
+  "region": "8.Execute Primary Operations",
+  "subregion": "8.3.Accept Customer Request",
+  "value": 50
+},
+  {
+    "key": "8.2.1.Something",
+    "region": "8.Execute Primary Operations",
+    "subregion": "8.2.Register Customer Request",
+    "value": 50
+  },
+  {
+    "key": "8.1.1.Something",
+    "region": "8.Execute Primary Operations",
+    "subregion": "8.1.Interact with Customer",
+    "value": 50
+  },
+  {
+    "key": "7.3.1.Something",
+    "region": "7.Manage Operations Preparation",
+    "subregion": "7.3.Plan Customer Request Acceptance",
+    "value": 50
+  },
+  {
+    "key": "7.2.1.Something",
+    "region": "7.Manage Operations Preparation",
+    "subregion": "7.2.Plan Customer Request Registration",
+    "value": 50
+  },
+  {
+    "key": "7.1.1.Something",
+    "region": "7.Manage Operations Preparation",
+    "subregion": "7.1.Plan Customer Interaction",
+    "value": 50
+  },
+  {
+  "key": "6.3.1.Something",
+  "region": "6.Manage Proposition Lifecycle",
+  "subregion": "6.3.Plan and perform  development of  Proposition Lifcycle",
+  "value": 50
+},
+  {
+    "key": "6.2.1.Something",
+    "region": "6.Manage Proposition Lifecycle",
+    "subregion": "6.2.Plan and perform  development of Sales, Marketing, Communication & Promotion",
+    "value": 50
+  },
+  {
+    "key": "6.1.1.Something",
+    "region": "6.Manage Proposition Lifecycle",
+    "subregion": "6.1.Plan and perform  development of  Demand Chain",
+    "value": 50
+  },
+  {
+    "key": "5.3.1.Something",
+    "region": "5.Define Competencies Management",
+    "subregion": "5.3.Define Competencies Management for Customer Acceptance",
+    "value": 50
+  },
+  {
+    "key": "5.2.1.Something",
+    "region": "5.Define Competencies Management",
+    "subregion": "5.2.Define Competencies Management for Customer Registration",
+    "value": 50
+  },
+  {
+    "key": "5.1.1.Something",
+    "region": "5.Define Competencies Management",
+    "subregion": "5.1.Define Competencies Management for Customer Interaction",
+    "value": 50
+  },
+  {
+    "key": "4.3.1.Something",
+    "region": "4.Plan Strategic Domain",
+    "subregion": "4.3.Define Plan for Proposition Portfolio Development",
+    "value": 50
+  },
+  {
+    "key": "4.2.1.Something",
+    "region": "4.Plan Strategic Domain",
+    "subregion": "4.2.Define Plan for the development of Strategic Demand",
+    "value": 50
+  },
+  {
+    "key": "4.1.1.Something",
+    "region": "4.Plan Strategic Domain",
+    "subregion": "4.1.Define Proposition Development & Marketing Strategy",
+    "value": 50
+  },
+  {
+    "key": "3.3.1.Something",
+    "region": "3.Analyze Enterprise Architecture",
+    "subregion": "3.3.Define Substrategies & Focus per Domain",
+    "value": 50
+  },
+  {
+    "key": "3.2.1.Something",
+    "region": "3.Analyze Enterprise Architecture",
+    "subregion": "3.2.Perform Enterprise Architecture Synthesis",
+    "value": 50
+  },
+  {
+    "key": "3.1.1.Something",
+    "region": "3.Analyze Enterprise Architecture",
+    "subregion": "3.1.Analyse Architecture Domains",
+    "value": 50
+  },
+  {
+    "key": "2.1.1.Something",
+    "region": "2.Perform Strategical Analysis",
+    "subregion": "2.3.Develop Business",
+    "value": 50
+  },
+
+  {
+    "key": "2.2.1.Something",
+    "region": "2.Perform Strategical Analysis",
+    "subregion": "2.2.Develop Business",
+    "value": 50
+  },
+
+  {
+    "key": "2.3.1.Something",
+    "region": "2.Perform Strategical Analysis",
+    "subregion": "2.1.Develop Business",
+    "value": 50
+  },
+  {
+    "key": "1.4.1.Something",
+    "region": "1.Support Enterprise",
+    "subregion": "1.4.Manage Organizational Development",
+    "value": 50
+  },
+  {
+    "key": "1.3.1.Something",
+    "region": "1.Support Enterprise",
+    "subregion": "1.3.Manage Personnel",
+    "value": 50
+  },
+  {
+    "key": "1.2.1.Something",
+    "region": "1.Support Enterprise",
+    "subregion": "1.2.Manage Assets",
+    "value": 50
+  },
+  {
+    "key": "1.1.1.Something",
+    "region": "1.Support Enterprise",
+    "subregion": "1.1.Develop Business",
+    "value": 50
+  }
+]
