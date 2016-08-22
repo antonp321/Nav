@@ -73,12 +73,14 @@ Generic treemap, based on http://bost.ocks.org/mike/treemap/
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js"></script>
-
 <script>
 
     window.addEventListener('message', function(e) {
         var opts = e.data.opts,
                 data = e.data.data;
+
+//        console.log(data);
+//        console.log(opts);
 
         return main(opts, data);
     });
@@ -89,7 +91,7 @@ Generic treemap, based on http://bost.ocks.org/mike/treemap/
         format: ",d",
         title: "",
         width: 960,
-        height: 500
+        height: 780
     };
 
     function main(o, data) {
@@ -104,8 +106,10 @@ Generic treemap, based on http://bost.ocks.org/mike/treemap/
         var width = opts.width - margin.left - margin.right,
                 height = opts.height - margin.top - margin.bottom - theight,
                 transitioning;
+//        console.log(width); = 960
+//        console.log(height); = 424
 
-        var color = d3.scale.category20c();
+        //var color = d3.scale.category20c();
 
         var x = d3.scale.linear()
                 .domain([0, width])
@@ -115,12 +119,26 @@ Generic treemap, based on http://bost.ocks.org/mike/treemap/
                 .domain([0, height])
                 .range([0, height]);
 
+//      var check  =  height / width * 0.5 * (1 + Math.sqrt(5))
+//
+//        console.log(check);
+
+//        console.log(data);
+
         var treemap = d3.layout.treemap()
-                .children(function(d, depth) { return depth ? null : d._children; })
+                .children(function(d, depth) {
+//                    depth ? console.log(null) : console.log(d._children);
+////                    console.log(d);
+//                    depth ? console.log(null) : console.log(d._children);
+                    return depth ? null : d._children;
+                })
+                .mode("slice")
                 //HERE IS WHERE WE SORT THE STUFF
                 .sort(function(a, b) { return a.key; })
-                .ratio(height / width * 0.5 * (1 + Math.sqrt(5)))
                 .round(false);
+
+
+        //console.log(height / width * 0.5 * (1 + Math.sqrt(5)));
 
         var svg = d3.select("#chart").append("svg")
                 .attr("width", width + margin.left + margin.right)
@@ -156,7 +174,7 @@ Generic treemap, based on http://bost.ocks.org/mike/treemap/
         initialize(root);
         accumulate(root);
         layout(root);
-        console.log(root);
+//        console.log(root);
         display(root);
 
         if (window.parent !== window) {
@@ -189,16 +207,103 @@ Generic treemap, based on http://bost.ocks.org/mike/treemap/
         // of sibling was laid out in 1×1, we must rescale to fit using absolute
         // coordinates. This lets us use a viewport to zoom.
         function layout(d) {
+
             if (d._children) {
                 treemap.nodes({_children: d._children});
-                d._children.forEach(function(c) {
-                    c.x = d.x + c.x * d.dx;
-                    c.y = d.y + c.y * d.dy;
-                    c.dx *= d.dx;
-                    c.dy *= d.dy;
-                    c.parent = d;
-                    layout(c);
-                });
+//                console.log("d");
+//                console.log(d);
+//                console.log("d._children");
+//                console.log(d._children);
+
+                if((d.key[0] === "1" || d.key[0] === "2" || d.key[0] === "3" || d.key === "Navigator") && d.key[1] !== "0"){
+                    d._children.forEach(function(c) {
+
+                        c.y = c.x;
+                        c.x = 0;
+                        c.dy = c.dx;
+                        c.dx = 1;
+
+//                    console.log("c");
+//                    console.log(c);
+//
+//                    console.log("");
+//                    console.log("LINE!");
+//
+//                    console.log("c.x");
+//                    console.log(c.x);
+//
+//                    console.log("c.dx");
+//                    console.log(c.dx);
+//
+//                    console.log("d.x");
+//                    console.log(d.x);
+//
+//                    console.log("d.dx");
+//                    console.log(d.dx);
+//
+//                    console.log("c.y");
+//                    console.log(c.y);
+//
+//                    console.log("c.dy");
+//                    console.log(c.dy);
+//
+//                    console.log("d.y");
+//                    console.log(d.y);
+//
+//                    console.log("d.dy");
+//                    console.log(d.dy);
+
+                        c.x = d.x + c.x * d.dx;
+                        c.y = d.y + c.y * d.dy;
+                        c.dx *= d.dx;
+                        c.dy *= d.dy;
+                        c.parent = d;
+
+                        layout(c);
+                    });
+                }
+                else{
+                    d._children.forEach(function(c) {
+
+//                    console.log("c");
+//                    console.log(c);
+//
+//                    console.log("");
+//                    console.log("LINE!");
+//
+//                    console.log("c.x");
+//                    console.log(c.x);
+//
+//                    console.log("c.dx");
+//                    console.log(c.dx);
+//
+//                    console.log("d.x");
+//                    console.log(d.x);
+//
+//                    console.log("d.dx");
+//                    console.log(d.dx);
+//
+//                    console.log("c.y");
+//                    console.log(c.y);
+//
+//                    console.log("c.dy");
+//                    console.log(c.dy);
+//
+//                    console.log("d.y");
+//                    console.log(d.y);
+//
+//                    console.log("d.dy");
+//                    console.log(d.dy);
+
+                        c.x = d.x + c.x * d.dx;
+                        c.y = d.y + c.y * d.dy;
+                        c.dx *= d.dx;
+                        c.dy *= d.dy;
+                        c.parent = d;
+
+                        layout(c);
+                    });
+                }
             }
         }
 
@@ -258,7 +363,6 @@ Generic treemap, based on http://bost.ocks.org/mike/treemap/
                         var keyAsStr = d.key;
                         var firstChar = keyAsStr.charAt(0);
                         var secondChar = keyAsStr.charAt(1);
-                        console.log(firstChar);
 
                         if(firstChar === "1" && secondChar !== "0"){
 //                            var arrOfColors = ["#DCDCDC", "#D3D3D3", "#C0C0C0", "#A9A9A9", "#808080", "#696969"];
@@ -359,10 +463,32 @@ Generic treemap, based on http://bost.ocks.org/mike/treemap/
         }
 
         function rect(rect) {
-            rect.attr("x", function(d) { return x(d.x); })
-                    .attr("y", function(d) { return y(d.y); })
-                    .attr("width", function(d) { return x(d.x + d.dx) - x(d.x); })
-                    .attr("height", function(d) { return y(d.y + d.dy) - y(d.y); });
+
+            rect.attr("x", function(d) {
+//                console.log(d.key);
+//                console.log("col");
+//                console.log(d.x);
+//                console.log("row");
+//                console.log(d.y);
+                return x(d.x);
+            })
+                    .attr("y", function(d) {
+//                        console.log(d.key);
+//                        console.log(d.y);
+                        return y(d.y);
+                    })
+                    .attr("width", function(d) {
+//                        console.log(d.key);
+//                        console.log(x(d.x + d.dx) - x(d.x));
+                        return x(d.x + d.dx) - x(d.x);
+                    })
+                    .attr("height", function(d) {
+
+//                        console.log(d.key);
+//                        console.log(y(d.dy));
+
+                        return y(d.y + d.dy) - y(d.y);
+                    });
         }
 
         function name(d) {
@@ -377,6 +503,7 @@ Generic treemap, based on http://bost.ocks.org/mike/treemap/
             if (!err) {
                 console.log(res);
                 var data = d3.nest().key(function(d) { return d.region; }).key(function(d) { return d.subregion; }).entries(res);
+                // console.log(data);
                 main({title: "NavigatorFunctions"}, {key: "Navigator", values: data});
             }
         });
@@ -385,3 +512,5 @@ Generic treemap, based on http://bost.ocks.org/mike/treemap/
 </script>
 </body>
 </html>
+
+
